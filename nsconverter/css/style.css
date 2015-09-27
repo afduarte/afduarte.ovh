@@ -1,0 +1,10 @@
+@charset "utf-8";
+* {margin: 0px;padding: 0px;}
+
+.page-header {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-bottom: 1px solid #c1c1c1;
+}
