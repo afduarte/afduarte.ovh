@@ -13,7 +13,7 @@
 
         <div class="row">
         <div class="container">
-            <div class="col s8 offset-s2">
+            <div class="col s10 offset-s1">
                 <h2>Stop Thinking Base 10!</h2>
                 <h4>Number system converter</h4>
             </div>
@@ -31,17 +31,19 @@
 
     <div class="row">
         <div class="container" id="fromDec">
-            <div class="col s4 offset-s4">
-                <form action="#">
-                    <input id="userNum" onchange="fromDec()" onkeyup="fromDec()" type="number" placeholder="Type your decimal number">
-                    <p>Result:</p><p id="result"></p>
-                    <p>
-                        <input name="convTo" type="radio" id="toBin" checked />
-                        <label for="toBin">To Binary</label>
-                        <input name="convTo" type="radio" id="toHex" />
-                        <label for="toHex">To Hex</label>
-                    </p>
-                </form>
+            <div class="col s12">
+                <div class="col s4 offset-s2">
+                    <form action="#">
+                        <input id="userNum" onchange="fromDec()" onkeyup="fromDec()" type="number" placeholder="Type your decimal number">
+                        <p>
+                            <input name="convTo" type="radio" id="toBin" checked />
+                            <label for="toBin">To Binary</label>
+                            <input name="convTo" type="radio" id="toHex" />
+                            <label for="toHex">To Hex</label>
+                        </p>
+                    </form>
+                </div>
+                <div class="s6"><p id="result"></p></div>
             </div>
         </div>
                 <div class="container" id="toDec">

@@ -1,4 +1,7 @@
-$("input:radio[name=convTo]").on("change click", fromDec);
+$(document).ready(function(){
+    $("input:radio[name=convTo]").on("change click", fromDec);
+});
+
 
 
 function fromDec(){
@@ -7,22 +10,22 @@ function fromDec(){
     var result = 0;
     if (convTo == "toBin"){
         result = (input >>> 0).toString(2);
-        $('#result').html("("+result+")<sub>2<sub>");
+        $('#result').html("Result: ("+result+")<sub>2<sub>");
     } else if (convTo == "toHex"){
         result = (input >>> 0).toString(16);
-        $('#result').html("("+result+")<sub>16<sub>");
+        $('#result').html("Result: ("+result+")<sub>16<sub>");
     }
 }
 
-function fromDec(){
+function toDec(){
     var convTo = $("input:radio[name=convFrom]:checked").attr('id');
     var input = $('#userBin').val();
     var result = 0;
     if (convTo == "toBin"){
         result = parseInt(input, 2);
-        $('#result').html("("+result+")<sub>10<sub>");
+        $('#result').html("Result: ("+result+")<sub>10<sub>");
     } else if (convTo == "toHex"){
         result = parseInt(input, 16);
-        $('#result').html("("+result+")<sub>10<sub>");
+        $('#result').html("Result: ("+result+")<sub>10<sub>");
     }
 }
