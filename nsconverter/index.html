@@ -23,8 +23,8 @@
     <div class="row">
         <div class="col s8 offset-s2">
             <ul class="tabs">
-                <li class="tab col s6"><a href="#test1">From Decimal</a></li>
-                <li class="tab col s6"><a href="#test2">To Decimal</a></li>
+                <li class="tab col s6" onclick=""><a href="#">From Decimal</a></li>
+                <li class="tab col s6"><a href="#">To Decimal</a></li>
             </ul>
         </div>
     </div>
@@ -33,20 +33,22 @@
         <div class="container" id="fromDec">
             <div class="col s4 offset-s4">
                 <form action="#">
-                    <input id="userNum" onchange="fromDec()" type="text" placeholder="Type your decimal number">
+                    <input id="userNum" onchange="fromDec()" onkeyup="fromDec()" type="number" placeholder="Type your decimal number">
+                    <p>Result:</p><p id="result"></p>
                     <p>
-                        <select>
-                            <option type="radio" id="toBin">To Binary</option>
-                            <option type="radio" id="toHex">To Hexadecimal</option>
-                        </select>
+                        <input name="convTo" type="radio" id="toBin" checked />
+                        <label for="toBin">To Binary</label>
+                        <input name="convTo" type="radio" id="toHex" />
+                        <label for="toHex">To Hex</label>
                     </p>
                 </form>
             </div>
         </div>
                 <div class="container" id="toDec">
-            <div class="col s4 offset-s4">
+            <div class="col s8 offset-s2">
                 <form action="#">
-                    <input id="userNum" onchange="toDec()" type="text" placeholder="Type your decimal number">
+                    <input id="userNum" onchange="toDec" type="text" placeholder="Type your decimal number"/>
+                    <p>Result:</p><p id="result"></p>
                     <p>
                         <input name="convTo" type="radio" id="toBin" checked />
                         <select type="radio">
