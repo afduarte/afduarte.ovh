@@ -30,15 +30,31 @@
     </div>
 
     <div class="row">
-        <div class="container">
+        <div class="container" id="fromDec">
             <div class="col s4 offset-s4">
                 <form action="#">
                     <input id="userNum" onchange="fromDec()" type="text" placeholder="Type your decimal number">
                     <p>
+                        <select>
+                            <option type="radio" id="toBin">To Binary</option>
+                            <option type="radio" id="toHex">To Hexadecimal</option>
+                        </select>
+                    </p>
+                </form>
+            </div>
+        </div>
+                <div class="container" id="toDec">
+            <div class="col s4 offset-s4">
+                <form action="#">
+                    <input id="userNum" onchange="toDec()" type="text" placeholder="Type your decimal number">
+                    <p>
+                        <input name="convTo" type="radio" id="toBin" checked />
+                        <select type="radio">
+                            <option
+                        </select>
+                        <label for="toBin">To Binary</label>
                         <input name="convTo" type="radio" id="toHex" />
                         <label for="toHex">To Hex</label>
-                        <input name="convTo" type="radio" id="toBin" />
-                        <label for="toBin">To Binary</label>
                     </p>
                 </form>
             </div>
@@ -47,7 +63,7 @@
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="js/materialize/materialize.js"></script>
+    <script src="js/materialize/bin/materialize.min.js"></script>
     <script src="js/convert.js"></script>
 </body>
 </html>

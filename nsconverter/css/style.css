@@ -20,3 +20,7 @@
     justify-content: center;
     -webkit-justify-content: center; /* Safari 6.1+ */
 }
+
+#toDec {
+    display: none;
+}
